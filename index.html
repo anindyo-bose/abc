@@ -71,8 +71,10 @@ body{
   padding-top: 10px;
 }
 .navbar-inverse{
-  background-color: teal;
-
+  background-color: rgb(4, 82, 122);
+}
+.row{
+  background-color: rgba(245,245,245,0.6);
 }
 
 
@@ -133,7 +135,7 @@ body{
 </nav>
 <br>
 
-<div class="container-fluid">
+<div class="container" style="width:75%;">
 
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -148,23 +150,23 @@ body{
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item ">
-        <img src="home\Cor1.JPG"  style="width:100%; height:500px;"  class=" img-responsive">
+        <img src="home\Cor1.JPG"  style="width:900px; height:400px;"  class=" img-responsive">
       </div>
 
       <div class="item">
-        <img src="home\Cor2.JPG"  style="width:100%; height:500px;" class=" img-responsive">
+        <img src="home\Cor2.JPG"  style="width:900px; height:400px;" class=" img-responsive">
       </div>
 
       <div class="item">
-        <img src="home\Cor3.JPG"  style="width:100%; height:500px;" class=" img-responsive">
+        <img src="home\Cor3.JPG"  style="width:900px; height:400px;" class=" img-responsive">
       </div>
 
       <div class="item">
-        <img src="home\Cor4.JPG"  style="width:100%; height:500px;" class=" img-responsive">
+        <img src="home\Cor4.JPG"  style="width:900px; height:400px;" class=" img-responsive">
       </div>
 
       <div class="item active">
-        <img src="home\15aug.jpg"  style="width:100%; height:500px;" class=" img-responsive">
+        <img src="home\15aug.jpg"  style="width:900px; height:400px;" class=" img-responsive">
       </div>
     </div>
 
@@ -172,37 +174,56 @@ body{
   </div>
 </div>
 <!-- Contact Area -->
-<div class="container hei" id="cont">
+<div class="container-fluid hei" id="cont">
   <h2><b>How to Reach us</b></h2>
-  <h3><b>Our Address</b></h3>
-  <h4>H.B Road, Tharpakhna,</h4>
-  <h4>Near Axis Bank,</h4>
-  <h4>Ranchi, Jharkhand 834001</h4>
-  <br>
-  <h3><b>Our Contact</b> </h3>
-  <center>
-  <table>
-    <tr>
-      <td><h4><b>Mr. Chandan Bose </td> <td><a href'#'><big> +91-93047-23025</big></a></b></h4></td></tr><tr>
-      <td><h4><b>Mr. Arnab Bose</td> <td><a href'#'><big> +91-81032-89944</big></a></b></h4></td>
-    </tr>
-  </table>
-</center>
-  <br>
-  <h3><b>Our Location</b></h3>
-
-  <div id="map"></div>
+  <div class="row">
+    <div class="col-sm-4" >
+      <h3><b>Our Address</b></h3>
+      <h4>H.B Road, Tharpakhna,</h4>
+      <h4>Near Axis Bank,</h4>
+      <h4>Ranchi, Jharkhand 834001</h4>
+    </div>
+    <div class="col-sm-4" >
+      <h3><b>Contact</b> </h3>
+      <center>
+      <table>
+        <tr>
+          <td><h4><b>Chandan Bose </td> <td><a href'#'><big> +91-93047-23025</big></a></b></h4></td></tr><tr>
+          <td><h4><b>Arnab Bose</td> <td><a href'#'><big> +91-81032-89944</big></a></b></h4></td>
+        </tr>
+      </table>
+    </center>
+  </div>
+    <div class="col-sm-4" >
+      <h3><b>Our Location</b></h3>
+      <center>
+      <div id="map" style="width:75%;height:300px" ></div>
+    </center>
+    <small class="pull-right"> All right reserved Google Maps<small>
     <script>
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 23.370662, lng: 85.327160},
-          zoom: 20
-        });
-      }
+    function myMap() {
+      var myCenter = new google.maps.LatLng(23.370662,85.327160);
+      var mapCanvas = document.getElementById("map");
+      var mapOptions = {center: myCenter, zoom: 10};
+      var map = new google.maps.Map(mapCanvas, mapOptions);
+      var marker = new google.maps.Marker({position:myCenter});
+      marker.setMap(map);
+    }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYv_XzJZszJpsBTFOwM_o9QJ239wMCj10&callback=initMap"
-    async defer></script>
+
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYv_XzJZszJpsBTFOwM_o9QJ239wMCj10&callback=myMap"
+        async defer></script>
+    </div>
+  </div>
+</div>
+
+<div class="container ">
+
+
+  <br>
+<div class="pull-right row"> Designed and developed by<a href"http://anindyobose.com" target"blank"> Anindyo Bose</a></div>
+  <br>
+
 </div>
 
 
