@@ -11,6 +11,12 @@
   <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
 </head>
 <style>
+.navbar-inverse{
+  background-color: teal;
+}
+.navbar-inverse .navbar-header .navbar-brand{
+  color:  white;
+}
 .bname{
   font-family: 'Lobster', cursive;
   text-align: center;
@@ -24,6 +30,21 @@ body{
 .alig{
   text-align: center;
 }
+.header img {
+  float: left;
+  background: #555;
+  border-radius:45px;
+  margin-top:-15px;
+  margin-right:10px;
+  max-width:50px;
+  max-height:50px;
+}
+
+.header h1 {
+  position: relative;
+  top: 18px;
+  left: 10px;
+}
 </style>
 <body>
 
@@ -35,7 +56,11 @@ body{
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand " href="http://newchandanmusicals.co.in">New Chandan Musicals</a>
+      <a class="navbar-brand" href="http://newchandanmusicals.co.in">
+        <div class="header">
+        <img src="..\home\logo.jpg" class="img-responsive" > <big>New Chandan Musicals</big>
+        </div>
+      </a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
 
@@ -64,7 +89,7 @@ body{
             </div>
           </div>
 
-        
+
 
       </ul>
     </div>
