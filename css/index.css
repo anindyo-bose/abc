@@ -63,3 +63,13 @@ body{
 .row{
   background-color: rgba(245,245,245,0.6);
 }
+
+.frame{
+  frameborder: 0;
+  margin: 0;
+  scrolling : no;
+
+}
+.fbframe{
+  allowTransparency : true;
+}
